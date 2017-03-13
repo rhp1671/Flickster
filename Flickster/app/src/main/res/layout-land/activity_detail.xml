@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+
+    <FrameLayout
+        android:id="@+id/flMovie"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:padding="@dimen/view_margin"
+
+    >
+
+        <ProgressBar
+            android:id="@+id/loader"
+            style="@android:style/Widget.Holo.Light.ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+        />
+        <com.google.android.youtube.player.YouTubePlayerView
+            android:id="@+id/player"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <!--  <ImageView
+
+              android:scaleType="fitCenter"
+              android:adjustViewBounds="true"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:id="@+id/ivMovie"
+          /> -->
+    </FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_horizontal_margin"
+    >
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            tools:text="Miss Peregrine's Home for Peculiar Children"/>
+
+        <TextView
+            android:id="@+id/releaseDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            tools:text="02-02-2001"/>
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:rating="2.0"
+            android:stepSize="1.0"/>
+
+        <TextView
+            android:id="@+id/tvOverview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="left"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            tools:text="After waking up in a hospital with amnesia, professor Robert Langdon and a doctor must race against time to foil a deadly global plot"/>
+    </LinearLayout>
+</LinearLayout>
+
+
